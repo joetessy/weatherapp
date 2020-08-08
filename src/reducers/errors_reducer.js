@@ -1,4 +1,5 @@
 import { LOCATION_ERROR } from '../actions/location_actions.js';
+// Manages errors slice of application state
 
 export default function(state = { locationError: null }, action){
   switch (action.type){

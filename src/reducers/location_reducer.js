@@ -1,4 +1,5 @@
 import { SET_LOCATION } from '../actions/location_actions.js';
+// Manages location slice of application state
 
 export default function(state = null, action){
   switch (action.type){

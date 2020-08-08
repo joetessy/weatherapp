@@ -3,11 +3,8 @@ import { connect } from 'react-redux';
 import { changeMode } from '../actions/mode_actions';
 
 class NavBar extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
+  
+  // Button click handler toggles state of UI via mode_actions.js
   handleClick() {
     this.props.changeMode();
   }
@@ -16,14 +13,14 @@ class NavBar extends Component {
     return (
       <div>
         <h1>Weather-App</h1>
-        <br></br>
-        <button disabled={this.props.mode === 1} onClick={this.handleClick}>Today's Forecast</button>
-        <button disabled={this.props.mode === 2} onClick={this.handleClick}>5 day Forecast</button>
+        <br/>
+        <button disabled={this.props.mode === 1} onClick={this.handleClick.bind(this)}>Today's Forecast</button>
+        <button disabled={this.props.mode === 2} onClick={this.handleClick.bind(this)}>5 day Forecast</button>
       </div>
     )
   }
 }
 
-
 const mapStateToProps = ({ mode }) => ({ mode });
+
 export default connect(mapStateToProps, { changeMode })(NavBar);
