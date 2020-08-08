@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import DailyForcast from './DailyForcast';
-import WeeklyForcast from './WeeklyForcast';
+import DailyForecast from './DailyForecast';
+import WeeklyForecast from './WeeklyForecast';
 import { setLocation, receiveLocationError } from './../actions/location_actions';
 
 class Content extends Component {
@@ -17,7 +17,7 @@ class Content extends Component {
     } else {
       return (
         <div>
-          {this.props.mode === 1 ? <DailyForcast /> : <WeeklyForcast />}
+          {this.props.mode === 1 ? <DailyForecast /> : <WeeklyForecast />}
           <br></br>
         </div>
       )

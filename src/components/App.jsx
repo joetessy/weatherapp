@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from './NavBar.jsx';
-import Content from './Content.jsx';
+import NavBar from './NavBar';
+import Content from './Content';
 
 const App = () => {
   return (
