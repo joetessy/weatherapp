@@ -7,7 +7,7 @@ export default function(state = { dailyForecast: null }, action){
     case FETCH_DAILY_FORECAST:
       return { dailyForecast: action.payload.data };
     case FETCH_WEEKLY_FORECAST:
-      return merge({ weekyForecast: action.payload.data }, state)
+      return merge({ weeklyForecast: action.payload.data }, state)
     default:
       return state;
   }

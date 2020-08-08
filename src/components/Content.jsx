@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import DailyForecastContainer from './Weather/DailyForecastContainer';
-import WeeklyForecastContainer from './Weather/WeeklyForecastContainer';
+import DailyForecastContainer from './weather/DailyForecastContainer';
+import WeeklyForecastContainer from './weather/WeeklyForecastContainer';
 import { setLocation, receiveLocationError } from './../actions/location_actions';
 
 class Content extends Component {
+
   // Retrieve current location and send via location_action.js on success or error
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(this.props.setLocation, this.props.receiveLocationError);
@@ -15,7 +16,7 @@ class Content extends Component {
     if (this.props.errors.locationError) {
     return <div>{this.props.errors.locationError}</div>
     } else if (!this.props.location) {
-     return ( <div>Loading...</div> )
+     return ( <div>Loading...<br/></div> )
     } else {
       return (
         <div>
