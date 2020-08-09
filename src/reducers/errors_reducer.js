@@ -7,7 +7,7 @@ export default function(state = { locationError: null, weatherError: null }, act
     case LOCATION_ERROR:
       return { locationError: action.payload };
     case WEATHER_ERROR:
-      return { weatherError: action.payload }
+      return { weatherError: action.payload };
     default:
       return state;
   }

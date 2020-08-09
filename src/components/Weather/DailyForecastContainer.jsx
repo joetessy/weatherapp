@@ -8,14 +8,23 @@ const DAILY_MODE = 'weather';
 
 class DailyForecastContainer extends Component {
 
-  // fetch weather data for daily forcast, send via weather_actions.js
+  // Fetch weather data for daily forcast, send via weather_actions.js
   componentDidMount() {
     this.props.fetchWeather(this.props.location, DAILY_MODE);
   }
 
   render() {
     let data = this.formatDataForDailyForecast(this.props.weather.dailyForecast);
-    return ( <DailyForecast data={data} type="one_day" /> );
+    if (data) {
+      return ( 
+        <div>
+          <h2>{data.city}, {data.country}</h2>
+          <DailyForecast data={data} type="one_day" /> 
+        </div>
+      );
+    } else {
+      return <div>Loading...</div>;
+    }
   }
   
   formatDataForDailyForecast(forecast) {
@@ -27,7 +36,7 @@ class DailyForecastContainer extends Component {
         temp: forecast.main.temp, 
         temp_min: forecast.main.temp_min, 
         temp_max: forecast.main.temp_max 
-      }
+      };
     }
   }
 }

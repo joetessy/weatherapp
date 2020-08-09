@@ -15,7 +15,11 @@ class WeeklyForecastContainer extends Component {
   }
 
   render() {
-    return <WeeklyForecast data={ this.props.weather.weeklyForecast } type="one_day" />
+    if (this.props.weather.weeklyForecast) {
+      return <WeeklyForecast data={ this.props.weather.weeklyForecast } type="one_day" />;
+    } else {
+      return <div>Loading...</div>;
+    }
   }
 }
 

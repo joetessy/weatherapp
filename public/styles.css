@@ -10,3 +10,7 @@ button {
 .error {
   color: red;
 }
+
+img {
+  padding-left: 25px;
+}

@@ -1,19 +1,17 @@
-# Weather-App for Vroom
+# Weather-App
 
-[Weather-app][live]
+[Weather-App live link](https://vroom-weather-app.herokuapp.com/)
 
-[live]: https://www.joetessy.com/weather-app
 
-Weather-app is a front-end application built with React.
+Weather-app is a front-end application built with React and Redux.
 Users can toggle a UI to display daily or weekly weather information
 
 ## Set Up
 
 1. Clone git repository
 2. Inside the repository, run `npm install` to install node modules.
-3. Run `webpack --watch` to build JavaScript Bundle
-4. Run `npm start` to start development server
-5. View application at `http://localhost:3000/`
+3. Run `npm start` to start local development server
+4. View application at `http://localhost:3000/`
 
 ## Components
 - NavBar
@@ -48,3 +46,4 @@ Users can toggle a UI to display daily or weekly weather information
 - Axios is used to fetch data from openweather.org API
 - Lodash is used to merge objects
 - Redux is used for state management
+- Redux Thunk is used to handle actions with async requests
