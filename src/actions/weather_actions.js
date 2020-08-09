@@ -22,7 +22,7 @@ export const fetchWeather = ({ lat, lon }, mode) => dispatch => {
 
 // Weather data
 const receiveWeather = ({ data, type }) => {
-    return {
+  return {
     type,
     payload: data
   };

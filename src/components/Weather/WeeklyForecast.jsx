@@ -21,15 +21,13 @@ const WeeklyForecast = ({ data }) => {
 };
 
 
-// Formats the weekly forcast information returned byb the API to be recieved by the DailyForecast component
+// Formats the weekly forcast information returned by the API to be recieved by the DailyForecast component
 const formatDataForDailyForecast = (forecast) => {
   return { 
-    weather: [{ icon: forecast.weather[0].icon }],
-    main: { 
-      temp: forecast.temp.day, 
-      temp_min: forecast.temp.min, 
-      temp_max: forecast.temp.max 
-    }
+    icon: forecast.weather[0].icon,
+    temp: forecast.temp.day,
+    temp_min: forecast.temp.min,
+    temp_max: forecast.temp.max
   }
 }
 export default WeeklyForecast;

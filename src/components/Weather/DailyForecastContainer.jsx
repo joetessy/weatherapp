@@ -14,7 +14,21 @@ class DailyForecastContainer extends Component {
   }
 
   render() {
-      return ( <DailyForecast data={this.props.weather.dailyForecast} type="one_day" /> );
+    let data = this.formatDataForDailyForecast(this.props.weather.dailyForecast);
+    return ( <DailyForecast data={data} type="one_day" /> );
+  }
+  
+  formatDataForDailyForecast(forecast) {
+    if (forecast) {
+      return { 
+        city: forecast.name,
+        country: forecast.sys.country,
+        icon: forecast.weather[0].icon,
+        temp: forecast.main.temp, 
+        temp_min: forecast.main.temp_min, 
+        temp_max: forecast.main.temp_max 
+      }
+    }
   }
 }
 
