@@ -14,6 +14,6 @@ export const setLocation = (position) => {
 export const receiveLocationError = () => {
   return {
     type: LOCATION_ERROR,
-    payload: 'Could not receive location'
+    payload: 'Could not receive location data'
   }
 }
