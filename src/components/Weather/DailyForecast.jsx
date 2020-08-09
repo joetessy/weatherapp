@@ -9,7 +9,7 @@ const DailyForecast = ({ data, type }) => {
           <div>
             <h2> {data.name}, {data.sys.country}
             </h2>
-            <div>Current Temp: {data.main.temp}</div>
+            <div>Temp: {data.main.temp}</div>
           </div>
         }
         <div>High: {data.main.temp_max}</div>

@@ -14,11 +14,11 @@ class Content extends Component {
   // Conditionally render content based on application UI state, set in NavBar.jsx and managed in mode_reducer.js
   render() {
     if (this.props.errors.locationError) {
-    return <div>{ this.props.errors.locationError }</div>
+    return <div className="error">{ this.props.errors.locationError }</div>
     } else if (!this.props.location) {
      return ( <div>Loading...<br/></div> )
     } else if (this.props.errors.weatherError) {
-      return <div>{ this.props.errors.weatherError }</div>
+      return <div className="error">{ this.props.errors.weatherError }</div>
     }else {
       return (
         <div>

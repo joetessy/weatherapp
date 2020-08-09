@@ -14,8 +14,8 @@ class NavBar extends Component {
       <div>
         <h1>Weather-App</h1>
         <br/>
-        <button disabled={this.props.mode === 1} onClick={this.handleClick.bind(this)}>Today's Forecast</button>
-        <button disabled={this.props.mode === 2} onClick={this.handleClick.bind(this)}>5 day Forecast</button>
+        <button disabled={ this.props.mode === 1 } onClick={ this.handleClick.bind(this) }>Today's Forecast</button>
+        <button disabled={ this.props.mode === 2 } onClick={ this.handleClick.bind(this) }>5 day Forecast</button>
       </div>
     )
   }

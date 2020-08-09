@@ -1,0 +1,12 @@
+html, body {
+  margin: 20px;
+  font-family: Gotham;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.error {
+  color: red;
+}
